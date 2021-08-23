@@ -88,36 +88,40 @@ section {
 .flex-row {
     display: flex;
 }
+
 .section-title {
     border-right: 8px solid var(--primary-color);
-    margin: 50px auto;
-    padding-bottom: 25px;
-    width: 80%;
+    margin: 50px 50x;
+    padding-right: 50px;
+    width: 300px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
     font-size: 32px;
     flex: 1;
 }
 
-.about-info {
+.about {
     display: flex;
+    justify-items: center;
     flex-wrap: wrap;
-    align-items:center;
-    margin: 3%;
+}
+
+.about-info {
+    margin: 20px 0;
     flex: 2 70%;
     line-height: 1.5;
 }
 
 .about-info img {
-    min-width: 15%;
-    margin: 0 35px;
-    flex: 1;
+    width: 200px;
+    margin: 10px 35px;
+    float:left;
 }
 
 .about-text {
     flex: 1;
+    margin: 0 35px;
 }
 
 .about-text h3 {
@@ -130,12 +134,16 @@ section {
     font-weight: 400;
 }
 
-.projects {
+.work {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
+.projects {
+    margin: 10px 0;
+    flex: 2 70%;
+}
 .project {
     margin: 20px;
     flex: 1;
@@ -145,10 +153,9 @@ section {
 
 .project-row {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 25px;
-    
+    margin: 25px; 
 }
 
 .project-row img {
@@ -169,10 +176,17 @@ section {
     font-weight: 400;
 }
 
+.contact {
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
 .contact-info {
-    display: block;
-    text-align: center;
-    line-height: 1.5;
+    margin: 10px 35px;
+    text-align: left;
+    line-height: 2.5;
+    flex: 1;
 }
 .contact-info a {
     text-decoration: none;
@@ -193,7 +207,7 @@ footer {
     padding-bottom: 50px;
 }
 
-footer h2 {
+footer p {
     font-size: 16px;
     font-weight: 600;
 }
@@ -203,13 +217,10 @@ footer h2 {
     header {
         padding-bottom: 10px;
         justify-content: center;
+        position: relative;
     }
     
     header a {
-        text-align: center;
-    }
-    header h1 {
-        width: 100%;
         text-align: center;
     }
     
@@ -223,12 +234,17 @@ footer h2 {
         font-size: 24px;
     }
     
-    .section {
+    section {
         margin: 25px;
     }
 
     .section-title {
-        width: 80%;
+        border-bottom: 8px solid var(--primary-color);
+        border-right: 0px;
+        padding: 20px;
+        margin: 20px 0;
+        justify-content:center;
+        text-align: center;
     }
     
     footer h2 {
@@ -237,14 +253,47 @@ footer h2 {
         width: 100%;
     }
 
+    .about {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about-info {
+        width: 100%; 
+        margin: 0;
+        justify-content: space-between;
+        flex: 2 70%;
+        line-height: 1.5;
+    }
+    
+    .about-info img {
+        width: 25%;
+        margin-left: 35px;
+        flex: 1;
+    }
+    
+    .about-text {
+        width: 80%; 
+        flex: 1;
+    }
+
     .project-row {
         margin: 15px;
     }
 
-    .contact ul li {
-        margin: 25px;
-        flex-direction: column;
+
+    .contact {
+        width: 100%;
+        justify-content: center;
     }
+
+    .contact-info {
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+        flex: 1 100%;
+    }
+
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
@@ -252,7 +301,24 @@ footer h2 {
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
-    .section {
+    section {
         margin: 15px;
+    }
+
+    .project-info {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .project-info h3 {
+        font-size: 18px;
+    }
+    
+    .project-info h4 {
+        font-size:16;
+    }
+
+    .contact-info p {
+        font-size: 16px;
     }
 }
