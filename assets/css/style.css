@@ -89,13 +89,13 @@ section {
     display: flex;
 }
 .section-title {
-    border-right: 4px solid var(--primary-color);
+    border-right: 8px solid var(--primary-color);
     margin: 50px auto;
     padding-bottom: 25px;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     font-size: 32px;
     flex: 1;
@@ -111,8 +111,9 @@ section {
 }
 
 .about-info img {
-    max-width: 25%;
+    min-width: 15%;
     margin: 0 35px;
+    flex: 1;
 }
 
 .about-text {
@@ -126,6 +127,7 @@ section {
 
 .about-text p {
     font-size: 18px;
+    font-weight: 400;
 }
 
 .projects {
@@ -158,25 +160,99 @@ section {
     text-align: center;
 }
 
-.contact {
+.project-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.project-info h4 {
+    font-weight: 400;
+}
+
+.contact-info {
+    display: block;
+    text-align: center;
+    line-height: 1.5;
+}
+.contact-info a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+.contact-info p {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+footer {
     background: var(--tertiary-color);
     color: whitesmoke;
-    padding: 35px;
-    flex: 1
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 50px;
 }
 
-.contact a {
-    text-decoration: none;
+footer h2 {
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.contact ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 10px;
+        justify-content: center;
+    }
+    
+    header a {
+        text-align: center;
+    }
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    header nav ul li a {
+        font-size: 24px;
+    }
+    
+    .section {
+        margin: 25px;
+    }
+
+    .section-title {
+        width: 80%;
+    }
+    
+    footer h2 {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+    }
+
+    .project-row {
+        margin: 15px;
+    }
+
+    .contact ul li {
+        margin: 25px;
+        flex-direction: column;
+    }
 }
 
-.contact ul li {
-    text-decoration: none;
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 768px) {}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    .section {
+        margin: 15px;
+    }
 }
