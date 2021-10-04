@@ -151,6 +151,10 @@ section {
     color: var(--tertiary-color)
 }
 
+.shadow {
+    box-shadow: 1px 1px 10px 2px #bbbbbb;
+}
+
 .project-row {
     display: flex;
     justify-content: center;
